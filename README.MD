@@ -28,27 +28,27 @@ Este proyecto consiste en el despliegue de una infraestructura en OpenStack, inc
 
 ### Descripción de las Instancias
 
-#### 1 app-priv
+#### 1. app-priv
 - **Imagen:** Ubuntu 22.04
 - **IP Interna:** 172.19.0.135
 - **Flavor:** m1.medium
 - **Descripción:** Esta instancia aloja la aplicación principal.
 
-#### 2 bastion-priv
+#### 2. bastion-priv
 - **Imagen:** Ubuntu Minimal 22.04
 - **IP Interna:** 172.19.0.168
 - **IP Externa:** 192.168.3.141
 - **Flavor:** m1.small
 - **Descripción:** Esta instancia actúa como el bastión de seguridad, permitiendo acceso SSH seguro a las demás instancias, para su configuración.
 
-#### 3 lb-priv
+#### 3. lb-priv
 - **Imagen:** NGINX en Ubuntu 18.04
 - **IP Interna:** 172.19.0.155
 - **IP Externa:** 192.168.3.183
 - **Flavor:** m1.small
 - **Descripción:** Esta instancia se utiliza como balanceador de carga para distribuir el tráfico hacia las aplicaciones.
 
-#### 4 db-priv
+#### 4. db-priv
 - **Imagen:** MySQL en Ubuntu 18.04
 - **IP Interna:** 172.19.0.12
 - **Flavor:** m1.small
@@ -58,7 +58,18 @@ Este proyecto consiste en el despliegue de una infraestructura en OpenStack, inc
 
 ### Grupos de Seguridad
 
-#### 2 sg_bastion
-- **Descripción:** Reglas para permitir acceso SSH a través del bastión.
+#### 1. sg_App
+- **Captura de Pantalla:**
+![Reglas de Grupo de Seguridad Metabase](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadApp.png)
+
+#### 2. sg_bastion
 - **Captura de Pantalla:**
 ![Reglas de Grupo de Seguridad Bastion](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadBastion.png)
+
+#### 3. sg_lb
+- **Captura de Pantalla:**
+![Reglas de Grupo de Seguridad Loead Balancer](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadLoadBalancer.png)
+
+#### 4. sg_db
+- **Captura de Pantalla:**
+![Reglas de Grupo de Seguridad Base de Datos](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadBaseDeDatos.png)
