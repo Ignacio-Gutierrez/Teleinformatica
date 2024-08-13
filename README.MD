@@ -84,3 +84,6 @@ Una vez conectado al bastión se podrá acceder mediante SSH a las demás instan
 - **URL:** `http://192.168.3.183`
 
 Se puede acceder a la aplicación a través del balanceador de cargas (load balancer) utilizando la dirección IP externa proporcionada en un navegador web.
+
+### Visualización Planteada
+![Imagen de la Visualizacion planteada](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/MetabaseVisualizacion.png)
