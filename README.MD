@@ -26,6 +26,9 @@ Este proyecto utiliza Mininet para crear una red virtual. A continuación se det
 
 Este proyecto consiste en el despliegue de una infraestructura en OpenStack, incluye instancia para aplicación, balanceo de carga, base de datos y un bastión de seguridad.
 
+### Topología de la red
+![Topologia de la red](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/TopologiaDeLaRed.png)
+
 ### Descripción de las Instancias
 
 #### 1. app-priv
@@ -58,18 +61,26 @@ Este proyecto consiste en el despliegue de una infraestructura en OpenStack, inc
 
 ### Grupos de Seguridad
 
-#### 1. sg_App
-- **Captura de Pantalla:**
+#### 1. sg_app
 ![Reglas de Grupo de Seguridad Metabase](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadApp.png)
 
 #### 2. sg_bastion
-- **Captura de Pantalla:**
 ![Reglas de Grupo de Seguridad Bastion](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadBastion.png)
 
 #### 3. sg_lb
-- **Captura de Pantalla:**
 ![Reglas de Grupo de Seguridad Loead Balancer](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadLoadBalancer.png)
 
 #### 4. sg_db
-- **Captura de Pantalla:**
 ![Reglas de Grupo de Seguridad Base de Datos](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadBaseDeDatos.png)
+
+
+### Acceso a las Instancias y URLs
+
+#### 1 Acceso al Bastión (bastion-priv)
+- **Comando SSH:** `ssh user@192.168.3.141`
+Una vez conectado al bastión se podrá acceder mediante SSH a las demás instancias usando sus direcciones IP internas para su configuración y gestión.
+
+#### 2 Acceso al Balanceador de Carga (lb-priv)
+- **URL:** `http://192.168.3.183`
+
+Se puede acceder a la aplicación a través del balanceador de cargas (load balancer) utilizando la dirección IP externa proporcionada en un navegador web.
