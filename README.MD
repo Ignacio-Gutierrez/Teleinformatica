@@ -21,3 +21,44 @@ Este proyecto utiliza Mininet para crear una red virtual. A continuación se det
    sudo python3 TP_Tele_Caso1.py
 
 3. Utilizar la CLI de Mininet para interactuar con la red.
+
+## Caso-2: Cloud Computing Classic (Despliegue desde Openstack)
+
+Este proyecto consiste en el despliegue de una infraestructura en OpenStack, incluye instancia para aplicación, balanceo de carga, base de datos y un bastión de seguridad.
+
+### Descripción de las Instancias
+
+#### 1 app-priv
+- **Imagen:** Ubuntu 22.04
+- **IP Interna:** 172.19.0.135
+- **Flavor:** m1.medium
+- **Descripción:** Esta instancia aloja la aplicación principal.
+
+#### 2 bastion-priv
+- **Imagen:** Ubuntu Minimal 22.04
+- **IP Interna:** 172.19.0.168
+- **IP Externa:** 192.168.3.141
+- **Flavor:** m1.small
+- **Descripción:** Esta instancia actúa como el bastión de seguridad, permitiendo acceso SSH seguro a las demás instancias, para su configuración.
+
+#### 3 lb-priv
+- **Imagen:** NGINX en Ubuntu 18.04
+- **IP Interna:** 172.19.0.155
+- **IP Externa:** 192.168.3.183
+- **Flavor:** m1.small
+- **Descripción:** Esta instancia se utiliza como balanceador de carga para distribuir el tráfico hacia las aplicaciones.
+
+#### 4 db-priv
+- **Imagen:** MySQL en Ubuntu 18.04
+- **IP Interna:** 172.19.0.12
+- **Flavor:** m1.small
+- **Descripción:** Instancia dedicada para la base de datos MySQL.
+
+![Instancias desplegadas](Teleinformatica/Caso2/IntanciasCaso2.png)
+
+### Grupos de Seguridad
+
+#### 2 sg_bastion
+- **Descripción:** Reglas para permitir acceso SSH a través del bastión.
+- **Captura de Pantalla:**
+![Reglas de Grupo de Seguridad Bastion](Teleinformatica/Caso2/ReglasDeGrupoDeSeguridadBastion.png)
