@@ -54,11 +54,11 @@ Este proyecto consiste en el despliegue de una infraestructura en OpenStack, inc
 - **Flavor:** m1.small
 - **Descripción:** Instancia dedicada para la base de datos MySQL.
 
-![Instancias desplegadas](Teleinformatica/Caso2/IntanciasCaso2.png)
+![Instancias desplegadas](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/IntanciasCaso2.png)
 
 ### Grupos de Seguridad
 
 #### 2 sg_bastion
 - **Descripción:** Reglas para permitir acceso SSH a través del bastión.
 - **Captura de Pantalla:**
-![Reglas de Grupo de Seguridad Bastion](Teleinformatica/Caso2/ReglasDeGrupoDeSeguridadBastion.png)
+![Reglas de Grupo de Seguridad Bastion](https://github.com/Ignacio-Gutierrez/Teleinformatica/blob/main/Caso2/ReglasDeGrupoDeSeguridadBastion.png)
