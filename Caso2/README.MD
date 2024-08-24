@@ -57,7 +57,7 @@ Este proyecto consiste en el despliegue de una infraestructura en OpenStack, inc
 Una vez conectado al bastión se podrá acceder mediante SSH a las demás instancias usando sus direcciones IP internas para su configuración y gestión.
 
 ### Acceso al Balanceador de Carga (lb-priv)
-- **URL:** `http://192.168.3.183`
+- **URL:** http://192.168.3.183
 
 Se puede acceder a la aplicación a través del balanceador de cargas (load balancer) utilizando la dirección IP externa proporcionada en un navegador web.
 
