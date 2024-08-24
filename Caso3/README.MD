@@ -3,7 +3,7 @@
 Este proyecto despliega Metabase y MySQL en un clúster Kubernetes, incluyendo toda la configuración necesaria para su funcionamiento.
 
 
-## Acceso a las Instancias y URLs
+## Acceso
 
 - **URL:** https://ignacio-gutierrez-web.my.kube.um.edu.ar
 
